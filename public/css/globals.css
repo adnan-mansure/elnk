@@ -1,0 +1,232 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+@import "tailwindcss";
+@theme {
+    --font-sans: 'Switzer', sans-serif;
+    --font-icon: "icomoon", sans-serif;
+}
+.btn{
+    @apply inline-flex items-center justify-center rounded-[14px] backdrop-blur-[65px] px-3 bg-white/5 cursor-pointer relative overflow-hidden;
+    box-shadow: 0px 1px 0px 0px rgba(255, 255, 255, 0),
+          0px -1px 0px 0px rgba(255, 255, 255, 0.2);
+}
+.input{
+box-shadow: 0px 1px 0px 0px rgba(255, 255, 255, 0),
+          0px -1px 0px 0px rgba(255, 255, 255, 0.2);
+}
+.btn-primary{
+  @apply  before:-top-6 before:absolute before:w-[calc(100%-24px)] before:px-5 before:blur-lg before:opacity-60 before:h-8 before:bg-[#0084FF]
+          after:-bottom-6 after:absolute after:w-[calc(100%-60px)] after:px-5 after:blur-lg after:opacity-60 after:h-8 after:bg-[#0084FF]
+          hover:before:-top-4.5 hover:after:-bottom-4.5 hover:before:opacity-100 hover:after:opacity-100;
+          box-shadow: 0px 1px 0px 0px rgba(255, 255, 255, 0),
+          0px -1px 0px 0px rgba(255, 255, 255, 0.2);
+}
+
+.btn-danger{
+  @apply  text-[#F51D1D] before:-top-6 before:absolute before:w-[calc(100%-24px)] before:px-5 before:blur-lg before:opacity-30 before:h-8 before:bg-[#F51D1D]
+          after:-bottom-6 after:absolute after:w-[calc(100%-60px)] after:px-5 after:blur-lg after:opacity-30 after:h-8 after:bg-[#F51D1D]
+          hover:before:-top-4.5 hover:after:-bottom-4.5 hover:before:opacity-60 hover:after:opacity-60;
+          box-shadow: 0px 1px 0px 0px rgba(255, 255, 255, 0),
+          0px -1px 0px 0px rgba(255, 255, 255, 0.2);
+}
+
+.btn-white{
+  @apply  before:-top-6 before:absolute before:w-[calc(100%-24px)] before:px-5 before:blur-lg before:opacity-0 before:h-8 before:bg-[#fff]
+          after:-bottom-6 after:absolute after:w-[calc(100%-60px)] after:px-5 after:blur-lg after:opacity-0 after:h-8 after:bg-[#fff]
+          hover:before:opacity-20 hover:after:opacity-20;
+          box-shadow: 0px 1px 0px 0px rgba(255, 255, 255, 0),
+          0px -1px 0px 0px rgba(255, 255, 255, 0.2);
+}
+
+.btn-default{
+  @apply  backdrop-blur-[60px] bg-white/5 hover:bg-white/15 border border-white/5 rounded-2xl text-white cursor-pointer shadow-none;
+}
+
+.kt-card{
+  @apply rounded-3xl backdrop-blur-[30px] bg-white/5 border border-white/10;
+}
+.kt-card-content{
+  @apply p-5;
+}
+
+.skinyButton{
+  @apply after:-top-3 before:-bottom-2.5;
+  &:hover{
+    &:after,
+    &:before{
+      @apply opacity-0;
+    }  
+  }
+  &:after,
+  &:before{
+    @apply opacity-0 z-1 w-[80%] h-[20%] transition-opacity absolute left-[10%] blur-md;
+  }
+  &:after{
+    background: linear-gradient(
+      to bottom,
+      rgba(255, 255, 255, 0.8) 0%,
+      rgba(255, 255, 255, 0.2) 60%,
+      rgba(255, 255, 255, 0.5) 100%
+    );
+  }
+  &:before{
+    background: linear-gradient(
+      to top,
+      rgba(255, 255, 255, 0.6) 0%,
+      rgba(255, 255, 255, 0.2) 60%,
+      rgba(255, 255, 255, 0.5) 100%
+    );
+  }
+}
+
+
+.mainBody{
+    -ms-overflow-style: none;
+    scrollbar-width: 0;
+    &::-webkit-scrollbar { 
+        display: none; 
+    }
+}
+.user{
+  border: 2px solid transparent;
+   background: linear-gradient(#484848, #484848) padding-box,
+               linear-gradient(to right, #26B7FF, #1D4AFE) border-box;
+}
+
+  .star { 
+    transform-box: fill-box;
+    transform-origin: center;
+    transform: scale(0);
+    animation: pop 2s ease-in-out infinite;
+    will-change: transform;
+  }
+
+  /* stagger delays */
+  .star:nth-child(1) { animation-delay: 1.5s; }
+  .star:nth-child(2) { animation-delay: 1s; }
+  .star:nth-child(3) { animation-delay: 0.5s; }
+
+  @keyframes pop {
+    0%   { transform: scale(0); opacity: 0; }
+    40%  { transform: scale(1); opacity: 1; }
+    70%  { transform: scale(0.9); }
+    100% { transform: scale(0); opacity: 0; }
+  }
+
+.border-point {
+  position: absolute;
+  background: radial-gradient(circle,rgba(255, 255, 255, 1) 8%, rgba(255, 255, 255, 0) 40%);
+  transform: translate(-50%, -50%);
+  transition: left 0.01s linear, top 0.01s linear;
+  pointer-events: none;
+}
+
+#saveContactBox,
+#saveContacts{
+  @apply translate-y-full transition-all duration-500;
+  &.active{
+    @apply translate-y-0 transition-all duration-500;
+  }
+}
+
+.shadow1{
+  box-shadow: -1px -1px 0px 0px rgba(255,255,255,0.20);
+-webkit-box-shadow: -1px -1px 0px 0px rgba(255,255,255,0.20);
+-moz-box-shadow: -1px -1px 0px 0px rgba(255,255,255,0.20);
+}
+
+.savedInfo{
+  background: linear-gradient(0deg, rgba(255, 255, 255, 0.02), rgba(255, 255, 255, 0.02)),
+  linear-gradient(299.37deg, rgba(29, 74, 254, 0.02) 32%, rgba(38, 183, 255, 0.1) 105.07%);
+}
+
+
+.fb-Search {
+  @apply h-14 w-full flex items-stretch rounded-[14px] backdrop-blur-[65px] px-4 bg-white/5 cursor-pointer relative overflow-hidden;
+	box-shadow: 0px 1px 0px 0px rgba(255, 255, 255, 0),
+          0px -1px 0px 0px rgba(255, 255, 255, 0.2);
+}
+
+.fb-Search_Input {
+	appearance: none;
+  position: absolute;
+  left: -100vw;
+  
+}
+
+.fb-Search_FauxInput {
+  @apply hidden border-0 border-r-2 border-r-transparent h-5 mt-[26px] relative;
+  &:after{
+    @apply content-[''] w-0.5 absolute -right-0.5 top-0 h-full;
+  }
+	.emailBox & {
+		@apply flex;
+	}
+    .fb-Search_Input:focus ~ &:after {
+        animation: pulseAttention 1.5s cubic-bezier(.215, .61, .355, 1) forwards infinite;
+    }
+}
+
+.fb-Search_Label {
+  @apply left-4 top-1/2 -translate-y-1/2 absolute transition-all text-[14px];
+    
+  .fb-Search_Input:focus ~ &,
+  .fb-Search_Input:not([value=""]) ~ & {
+      @apply text-[10px] top-[12px] translate-y-0 transition-all font-light;
+  }
+}
+
+@keyframes pulseAttention {
+    50% {
+        background: linear-gradient(180deg, #26B7FF 0%, #1D4AFE 100%);
+        box-shadow: 0px 4px 4.8px 0px #26B7FF40, 0px 4px 4.8px 0px #1F57FF, 0px 3px 2.4px 0px #26B7FFF5;
+    }
+}
+.glow{
+  background: linear-gradient(109.31deg, #1D4AFE 15.29%, #26B7FF 93.55%);
+}
+
+.setupBox{
+  @apply bg-[linear-gradient(108.31deg,#96B115_0%,#E1FF4F_100.39%)];
+  border-radius: 0 0 24px 24px;
+
+  .boxLeft,
+  .boxRight {
+    @apply absolute h-[24px] w-[24px] overflow-hidden;
+  }
+
+    /* bottom-left */
+  .boxLeft {
+    @apply bottom-full left-0;
+
+    &::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      height: 200%;
+      width: 200%;
+      border-radius: 100%;
+      /* negative Y push to carve bottom-left */
+      box-shadow: -24px 24px 0 24px transparent, -24px 24px 0 24px #96B115;
+    }
+  }
+
+  /* bottom-right */
+  .boxRight {
+    @apply bottom-full right-0;
+
+    &::before {
+      content: '';
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      height: 200%;
+      width: 200%;
+      border-radius: 100%;
+      /* positive Y push to carve bottom-right */
+      box-shadow: 24px 24px 0 24px transparent, 24px 24px 0 24px #E1FF4F;
+    }
+  }
+}
+
+
