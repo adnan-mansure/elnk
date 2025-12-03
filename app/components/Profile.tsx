@@ -10,7 +10,6 @@ import { useState } from "react";
 import SaveContactBox from "./SaveContactBox";
 import SaveContact from "./SaveContact";
 
-
 export default function Profile() {
  const [isContactBoxOpen, setIsContactBoxOpen] = useState(false);
   // State for secondary popup inside SaveContactBox (optional)

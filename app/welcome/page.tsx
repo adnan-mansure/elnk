@@ -25,23 +25,15 @@ export default function WelcomePage(){
               </div>
               <div className="flex flex-col gap-6 w-full">
 
-<<<<<<< HEAD
                 <div className="emailBox relative focus-within:[&>.emailBox-bg]:opacity-100">
                   <label className="fb-Search focus-within:shadow-none! relative z-1" htmlFor="Input">
-=======
-                <div className="emailBox">
-                  <label className="fb-Search" htmlFor="Input">
->>>>>>> 19b0de7bde7eed699c97216af1a7c32828eae604
                     <input id="Input" className="fb-Search_Input" value={email}  onChange={(e) => setEmail(e.target.value)} />
                     <span className="fb-Search_FauxInput" dir="rtl">{email}</span>
                     <span className="fb-Search_Label" >Email</span>
                   </label>
-<<<<<<< HEAD
                   <span
                     className="emailBox-bg absolute border border-transparent shadow-[0_0_8px_0_#1D4AFE] -inset-px rounded-[14px] bg-corner-gradient opacity-0 transition-opacity duration-300 pointer-events-none">
                 </span>
-=======
->>>>>>> 19b0de7bde7eed699c97216af1a7c32828eae604
                 </div>
 
 
